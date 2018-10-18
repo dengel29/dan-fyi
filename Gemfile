@@ -6,7 +6,7 @@ gem "middleman"
 
 gem "middleman-blog", "~> 4.0"
 
-gem "middleman-deploy"
+gem 'middleman-deploy', github: 'middleman-contrib/middleman-deploy', branch: 'master'
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"

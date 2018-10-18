@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link href="/stylesheets/monokai-sublime.css" rel="stylesheet" /><link href="/stylesheets/article.css" rel="stylesheet" /><link href="/stylesheets/all.css" rel="stylesheet" />
+</head>
+
+<body>
+   <script src="/javascripts/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+   <ul class="nav-grid">
+    <li><a href="/">HOME</a></li>
+    <li><a href="/projects.html">PROJECTS</a></li>
+    <li><a href="/article_index.html">ARTICLES</a></li>
+  </ul>
+  <div class="article">
+
+    <h1 id="msgseccheck">msgSecCheck</h1>
+
+<p class="subtitle">A Guide on How to Use WeChat’s Text Censorship API</p>
+
+<h2 id="intro-what-is-this-and-why">Intro: What is this and why</h2>
+<p>Me and <a class="highlight" href="http://thegraceyang.com/" target="_blank">@yaycake</a> made a miniprogram. Because of our circumstances – hosting on a friends server and with our miniprogram registered under another friend’s ID (as foreign developers without a company) – we felt a responsibility to secure our miniprogram. <br />
+Our use case: we created a gif search app. We don’t control the content, since it pulls content from the Giphy API, so decided to redirect search queries that were inharmonious, only triggering the search if it passed the censorship API’s check.<br />
+Below is the bit of information we learned while implementing it</p>
+
+<h2 id="before-you-get-to-the-censoring">Before you Get to the Censoring…</h2>
+
+<p>WeChat’s text censorship API is called <code>msgSecCheck</code>.</p>
+
+<p>If you go right to the page for <a href="https://developers.weixin.qq.com/miniprogram/dev/api/msgSecCheck.html">msgSecCheck</a> you’ll see you must include something called an <code>ACCESS_TOKEN</code> in the parameters:<br />
+<code>https://api.weixin.qq.com/wxa/msg_sec_check?access_token=ACCESS_TOKEN</code>.</p>
+
+<p>So let’s get that access token.</p>
+
+<p><a href="https://developers.weixin.qq.com/miniprogram/dev/api/msgSecCheck.html">msgSecCheck API docs</a></p>
+
+<h2 id="getting-your-access-token">Getting your Access Token</h2>
+<p>You need an access token to trigger the msgSecCheck, as well as trigger some of WeChat’s  other APIs. If you have a server set up and developer account on mp.weixin.qq.com already, proceed to #3</p>
+
+<h3 id="get-your-appid-and-appsecret">1) Get your app_id and app_secret</h3>
+<p>If you’re reading this, you probably already have a WeChat MP account. If you don’t, register for a WeChat account on mp.weixin.qq.com (please read <a href="insert-good-registration-walkthorugh-here">this exhaustive walkthrough that we didn’t write</a> for more info on how to register). This is the Open Platform website, it’s basically your dashboard for managing an MP project, accomplishing critical tasks like adding developers, publishing new versions, and lots more.</p>
+
+<p>For now, you just need to get your WeChat <code>app_id</code> and <code>app_secret</code> from 设置 &gt; 开发设置. This is the same page where you can whitelist your server and other domains you make calls to from your MP (note: another section <em>or</em> another article?)</p>
+
+<h3 id="set-up-a-server-to-request-the-access-token">2) Set up a server to request the access token</h3>
+<p>You also need a backend server to make this request, since Tencent doesn’t want you putting your <code>app_id</code>or <code>app_secret</code> in the front-end. They enforce this by disallowing any api calls to api.weixin.qq.com.   If you try to add it to your whitelisted domains you will get an error that’s further explained:</p>
+
+<blockquote>
+  <p>如填写了“api.weixin.qq.com”会出现上述错误提示。出于安全考虑，为避免开发者将AppSecret放置在小程序的前端代码内，平台禁止设置此域名。</p>
+
+  <p>Translation: if you enter “api.weixin.qq.com” [in the whitelist] you’ll see the above message [that it cannot be used]. For the sake of safety and to prevent developers placing the AppSecret in the miniprogram front end code, the platform prohibits whitelisting this domain.
+<a href="http://kf.qq.com/faq/1706236NjINj1706236VRZBR.html">source</a></p>
+</blockquote>
+
+<p>The action that triggers this request for an <code>access_token</code>  can happen on the front end, Tencent just doesn’t want you putting the <code>app_secret</code> in the front end.</p>
+
+<h3 id="request-the-access-token">3) Request the access token</h3>
+<p><a href="https://developers.weixin.qq.com/miniprogram/dev/api/token.html#%E8%8E%B7%E5%8F%96-accesstoken">Link to the access token API docs</a></p>
+
+<p>With everything in place you can make your request for the access token.</p>
+
+<p>Make a <code>GET</code> request to the address below, keeping the <code>grant_type=client_credential</code> parameter the same, but replacing  <code>APPID</code> and <code>APPSECRET</code> with your own.</p>
+
+<p><code>https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=APPID&amp;secret=APPSECRET</code></p>
+
+<p>The response object will look like this:</p>
+
+<pre>
+  <code class="json">
+{
+  "access_token": "ACCESS_TOKEN",
+  "expires_in": 7200
+}
+  </code>
+</pre>
+
+<p>Now you can grab the very long access token and send it to your msgSecCheck API request. As for the expiration (7200 seconds = 120 minutes) you can do with that what you will. We suggest caching the access token and requesting it again after its expired, rather than requesting an access token for every msgSecCheck request.</p>
+
+<h2 id="make-the-msgseccheck-request">Make the msgSecCheck request</h2>
+<p><a href="https://developers.weixin.qq.com/miniprogram/dev/api/msgSecCheck.html">Link to msgSecCheck docs</a></p>
+
+<p>Finally, we’re checking if our content is risky!</p>
+
+<p>To call the msgSecCheck API, you’ll pass the <code>access_token</code> as a parameter in the url, and the content you’re checking as the payload. Below is how we implemented this (our server was written in Ruby, and the calls using the RestClient gem):</p>
+
+<pre>
+  <code class="rb">
+def censor_check(token, query)
+
+    # Check if query is already in cached list
+    censored = @cacher.get_censored
+    return 'Censored term' if censored.include?(query)
+
+    # Set payload to json format
+    params = { "content": query }.to_json
+
+    # Call api
+    raw_res = RestClient.post("https://api.weixin.qq.com/wxa/msg_sec_check?access_token=#{token}", params, content_type: 'application/json', accept: 'application/json')
+    res = JSON.parse(raw_res)
+
+    if res['errcode'] == 0
+      # errcode 0 means the content has passed the security check
+      puts 'Okey dokey'
+      return query
+
+    elsif res['errcode'] == 87_014
+      # errcode 87014 means the content in the payload is 'risky'
+
+      # Add query to list of censored queries
+      @cacher.add_censored(query)
+      return 'risky content'
+
+    elsif res['errcode'] == 44_001 || res['errorcode'] == 44_004
+      # errcode 4401 means token is empty
+      puts 'possibly empty'
+      return query
+
+    elsif res['errcode'] == 42_001
+      # errcode 42001 means token expired
+
+    # clear cache, get a new one, try again
+      @cacher.set(key: 'cached_token', value: '')
+      # get_access_token is a separate function
+    token = get_access_token
+    # retry msgSecCheck with refreshed access token
+      censor_check(token, query)
+  end
+  </code>
+</pre>
+
+<p>The response codes only tell the following things – it’s up to you to implement the logic that follows receiving each type of response.</p>
+
+<blockquote>
+  <p>0 = content is fine</p>
+
+  <p>87014 = content does not pass the test</p>
+
+  <p>44001 = content is empty, there is no data in the payload</p>
+
+  <p>42001 = access token has expired and needs to be fetched again</p>
+</blockquote>
+
+<p>In our case, when the content did not pass the test, we simply replaced the risky search query with something more innocuous. The caching logic is not imperative, but it increased our miniprogram’s performance so we recommend considering something similar.</p>
+
+<p>And that’s pretty much it! Go forth and make some harmonious miniprograms!</p>
+
+
+
+  </div>
+  <a href="/article_index.html">Articles</a>
+</body>
+</html>

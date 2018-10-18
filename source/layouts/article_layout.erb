@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <%= stylesheet_link_tag "monokai-sublime", "article.css", "all.css"  %>
+</head>
+
+<body>
+   <script src="/javascripts/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+   <ul class="nav-grid">
+    <li><%= link_to 'HOME', "/index.html" %></li>
+    <li><%= link_to 'PROJECTS', "/projects.html" %></li>
+    <li><%= link_to 'ARTICLES', "/article_index.html" %></li>
+  </ul>
+  <div class="article">
+
+    <%= yield %>
+
+  </div>
+  <%= link_to 'Articles', '/article_index.html'%>
+</body>
+</html>

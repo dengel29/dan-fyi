@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <!-- <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"> -->
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "The Middleman" %></title>
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+
+    <%= stylesheet_link_tag "all" %>
+
+  </head>
+  <body>
+    <ul class="nav-grid">
+      <li><%= link_to 'HOME', "/index.html" %></li>
+      <li><%= link_to 'PROJECTS', "/projects.html" %></li>
+      <li><%= link_to 'ARTICLES', "/article_index.html" %></li>
+    </ul>
+
+    <div class="fade-in">
+    <%= yield %>
+    </div>
+    <div class="footer-container">
+
+      <input type="checkbox" id="contact-show" hidden>
+
+      <div class="hidden-contact" style="background-color: rgba(114, 17, 155,.7);
+    border-radius: 3px;">
+        <div>
+        <p>dengel29 [at] gmail.com || dp_engel</p>
+        </div>
+      </div>
+      <label class="footer-label" id="contact-info" for="contact-show">
+      <h4 id="footer-contact-button">Reveal Dan's Email and WeChat ID</h4>
+      </label>
+      <p style="color: grey;"> Designed + Coded By Me</p>
+    </div>
+  </body>
+</html>

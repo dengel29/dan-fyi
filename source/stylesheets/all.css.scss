@@ -1,10 +1,15 @@
+$source-sans: 'Source Sans Pro', sans-serif;
+$link-underline: linear-gradient(to bottom, rgba(124, 198, 254, .0) 75%, rgba(124, 198, 254, .7
+)80%);
 @charset "utf-8";
+
+
 
 body {
 /*   width: 100%;
   height: 100vh; */
-  background:linear-gradient(105deg, #F0F4F6, #FFFFFF);
-  font-family:'Source Sans Pro', sans-serif;
+  background: linear-gradient(105deg, #F0F4F6, #FFFFFF);
+  font-family: $source-sans;
 }
 
 /* FADE IN CODE START~~~~~~~~~~~*/
@@ -56,58 +61,41 @@ body {
 
 .fade-in {
   animation: fadeIn 1.5s forwards ;
-
 }
 
 
 /* FADE IN CODE END ~~~~~~~~~~~~*/
-h1 {
-  color: rgba(0, 0, 0, .3);
-  font-weight: bold;
-  font-size: 24px;
-  letter-spacing: -1px;
-  text-transform: uppercase;
-  margin: 0; }
 
 .nav-grid {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  max-width:30vw;
+  flex-basis:end;
   text-decoration: none;
   list-style: none;
   align-items: center;
-  margin-bottom: 28px;
-  font-size: 20px;
+  margin-bottom: 1.75rem;
+  font-size: 1.25rem;
   width: 80vw;
-
+  min-width:17.5rem;
 }
 
-:not(.nav-grid) a {
-  text-decoration: none;
-background: linear-gradient(to bottom, rgba(124, 198, 254, .0
-) 65%, rgba(124, 198, 254, .7
-)80%);
-  border-radius: 3px;
-  padding: 5px 5px 1px 5px;
+:not(.nav-grid) {
+  a {
+    text-decoration: none;
+    background: $link-underline;
+    border-radius: 3px;
+  }
 }
 
-.nav-grid a {
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-  background: none;
+.nav-grid {
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.125rem;
+    background: none;
+  }
 }
-
-.selected {
-  background: linear-gradient(to bottom, rgba(239, 118, 122, .0
-) 65%, rgba(239, 118, 122, .7
-)80%);
-  border-radius: 3px;
-  padding: 4px;
-  color: black;
-  cursor: none;
-}
-
-
 
 
 /*- - - - - Hidden Contact*/
@@ -152,7 +140,7 @@ background: linear-gradient(to bottom, rgba(124, 198, 254, .0
     transition: ease 2s;
     /* align-self: flex-end; */
     text-align: center;
-    width: 140px;
+    width: 8.75rem;
   }
 
   #footer-contact-button:hover, #footer-contact-button:click{

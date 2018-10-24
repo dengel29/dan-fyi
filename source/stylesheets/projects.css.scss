@@ -26,6 +26,8 @@ $proj-box-shadow: 0.125rem 0.1875rem 0.03125rem 0.25rem;
   max-width: 1020px; */
 
   display: grid;
+  margin:auto;
+  justify-content:center;
   grid-template-columns: repeat(auto-fill, minmax(21.25rem, .85fr));
   column-gap: 2%;
 

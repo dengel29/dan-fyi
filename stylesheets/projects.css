@@ -18,6 +18,8 @@
     flex-direction: column;
     max-width: 1020px; */
   display: grid;
+  margin: auto;
+  justify-content: center;
   grid-template-columns: repeat(auto-fill, minmax(21.25rem, 0.85fr));
   column-gap: 2%; }
 

@@ -1,11 +1,23 @@
  /*article.css*/
+
+.nav-grid li:nth-child(3n) {
+ background: linear-gradient(to bottom, rgba(0, 189, 157, .0
+) 85%, rgba(0, 189, 157, .5
+)70%);
+  border-radius: 3px;
+  color: black;
+  cursor: none;
+  z-index: 2;
+}
+
+
 .article {
   text-align: left;
-  margin-left: 20px;
-  padding-left: 30px;
-  padding-right: 60px;
+  margin-left: 1%;
+  padding-left: 4%;
+  padding-right: 5%;
   min-width: 330px;
-  max-width: 780px;
+  max-width: 60vw;
   line-height: 22px;
 
   grid-template: 1 / 1
@@ -13,9 +25,6 @@
 }
 
 :not(pre) code {
-  /*background-color: #222233;*/
-  border-radius: 2px;
-  box-shadow: 0px 1px 0px 0px;
   padding: 1px 3px 3px 3px;
   color: black;
   font-weight: normal;
@@ -29,34 +38,33 @@ a {
 ), rgba(124, 198, 254, .6
 ));
   border-radius: 3px;
-  padding: 2px 4px 2px 4px;
   color: black;
 }
 
 br {
-  line-height: 36px
+  line-height: 2.25rem
 }
 
 p {
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .container {
  padding-right: 10em;
- border-right: 32px black solid ;
+ border-right: 2rem black solid ;
 }
 
 
 .subtitle {
-  font-size: 22px;
+  font-size: 1.375rem;
   border-bottom: 3px solid;
-  padding-bottom: 4px;
+  padding-bottom: 0.25rem;
 }
 
 blockquote {
   border-left:0.5px grey solid;
   padding-left: 15px;
-  max-width: 540px;
+  max-width: 33.75rem;
 }
 
 blockquote p {

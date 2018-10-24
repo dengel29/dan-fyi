@@ -1,0 +1,147 @@
+$neat-underline: linear-gradient(to bottom, rgba(0, 189, 157, .0) 85%, rgba(0, 189, 157, .5)70%);
+$proj-box-shadow: 0.125rem 0.1875rem 0.03125rem 0.25rem;
+%circ-proj-img {
+  width:50%;
+  height: auto;
+  min-width: 7.5rem;
+}
+
+.nav-grid {
+    li:nth-child(2n) {
+      background: $neat-underline;
+      border-radius: 3px;
+      // padding: 0.25rem;
+      color: black;
+      cursor: none;
+      z-index: 2;
+    }
+  }
+
+.projects {
+/* `````previous style````` */
+/*   padding-left: 15px;
+  padding-right: 30px;
+  display:flex;
+  flex-direction: column;
+  max-width: 1020px; */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(21.25rem, .85fr));
+  column-gap: 2%;
+
+
+}
+
+.project {
+  display: grid;
+  grid-template-rows: minmax(2.5rem, 3.125rem) 1fr max-content;
+  row-gap: 0.625rem;
+  padding:  1.25rem 1.25rem 1.25rem 1.25rem;
+  margin-bottom: 2.25rem;
+  /* min-width: 280px; */
+  /* max-width: 340px; */
+}
+
+/* .image-skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+} */
+
+.mid-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sticker-img {
+  @extend %circ-proj-img
+}
+
+.journey-img {
+  @extend %circ-proj-img
+}
+
+.wagon-img {
+  @extend %circ-proj-img
+}
+
+.volunteer-us-img {
+  height: auto;
+  width: 75%;
+}
+
+
+
+.mid-row .skill-list {
+ /* flex-basis: fit-content; */
+ margin-left: 0.625rem;
+}
+
+
+.shadow-sticker {
+  box-shadow: $proj-box-shadow #9013FE;
+  /* transition-duration: .5s; */
+}
+
+/* .shadow-sticker:hover {
+
+  transition-duration: .5;
+  transform: translate(6px,-4px);
+  transition-timing-function: ease-in-out;
+} */
+
+.shadow-journey {
+  box-shadow: $proj-box-shadow #FFC53D;
+  /* transition-duration: .5s; */
+}
+
+.shadow-wagon {
+  box-shadow: $proj-box-shadow #C22F2F;
+  /* transition-duration: .5s; */
+}
+
+.shadow-volunteer {
+  box-shadow: $proj-box-shadow #52BE55
+}
+
+h3 {
+
+  // width:fit-content;
+  z-index:1;
+  // background:none;
+  max-height: 6.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.project-title {
+  display:flex;
+  align-items:center;
+  font-size: 1.75rem;
+  text-align: center;
+  grid-column: 1/ -1;
+  grid-row: 1;
+  justify-content:center;
+
+}
+
+.project-description {
+  grid-row: 3;
+  grid-column: 1 / -1;
+  text-align:center;
+  font-family:'Source Sans Pro', sans-serif;
+  font-size: 1.125rem;
+}
+
+.skill-list ul{
+  list-style: none;
+  border-left: 2px dotted black;
+}
+
+.skill-list ul li {
+  font-weight: bolder;
+  margin-left: -1.5625rem;
+  line-height: 1.25rem;
+
+}

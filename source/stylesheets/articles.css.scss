@@ -26,18 +26,13 @@ $line-color: rgba(0, 189, 157, 1);
   background:  none;
 }
 
-.article a:hover,
-.article a:focus {
-  outline: none;
-}
-
 .articles-container {
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
   row-gap: 10%;
   /*grid-template-rows: repeat(auto-fit);*/
   margin-left: 1.5rem;
-  margin-bottom: 1.875rem;
+  margin-bottom: 5.75rem;
 }
 
 .article-title {
@@ -94,15 +89,25 @@ p {
   transition-timing-function: ease-in-out;
 }
 
-.cl-effect-6 a:hover::before {
-  width: 0px;
-  opacity: 1;
 
-  transition-timing-function: ease-in-out;
-}
+// only apply hover styles for devices using mouse
+@media (hover:hover) {
 
-.cl-effect-6 a:hover::after {
-  transition-timing-function: ease-in-out;
-  height: 90%;
+  .article a:hover,
+  .article a:focus {
+    outline: none;
+  }
+  .cl-effect-6 a:hover::before {
+    width: 0px;
+    opacity: 1;
+
+    transition-timing-function: ease-in-out;
+  }
+
+  .cl-effect-6 a:hover::after {
+    transition-timing-function: ease-in-out;
+    height: 90%;
+
+  }
 
 }

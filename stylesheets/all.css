@@ -1,3 +1,7 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent; }
+
 body {
   /*   width: 100%;
     height: 100vh; */
@@ -68,17 +72,19 @@ body {
   /* align-self: center; */
   -webkit-transition: opacity .5s, visibility 0s 0.5s;
   transition: opacity .5s, visibility 0s .5s;
-  color: white;
+  color: black;
   /* text-align: center; */
   z-index: 2;
-  background-color: #000; }
+  background-color: transparent;
+  line-height: 0px;
+  margin: auto; }
 
 .hidden-contact > div > a {
   text-decoration: none;
   color: black; }
 
 #contact-show:checked ~ .hidden-contact {
-  /* z-index: 6; */
+  z-index: 100;
   opacity: 1;
   visibility: visible;
   -webkit-transition: opacity 0.5s;
@@ -88,12 +94,12 @@ body {
 #footer-contact-button {
   padding: 1rem 3rem;
   color: white;
-  background-color: black;
+  background-color: #00bd9d;
   border-radius: 3rem;
   transition: ease 2s;
   /* align-self: flex-end; */
   text-align: center;
-  width: 8.75rem; }
+  width: 7.75rem; }
 
 #footer-contact-button:hover, #footer-contact-button:click {
   padding: 1.5rem 3.5rem; }
@@ -103,3 +109,19 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column; }
+
+.copy-to-clipboard {
+  outline: none;
+  border-top: 4px solid black;
+  text-align: center;
+  cursor: pointer;
+  width: fit;
+  margin: auto; }
+
+.copy-to-clipboard::after {
+  position: absolute;
+  top: 0.1875rem;
+  left: 0rem;
+  width: 1.3125rem;
+  height: 0px;
+  background: black; }

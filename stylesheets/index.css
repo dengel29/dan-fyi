@@ -15,7 +15,8 @@
 
 .welcome-container {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin-bottom: 4.5rem; }
 
 ul {
   list-style: none; }
@@ -23,11 +24,13 @@ ul {
 li {
   list-style: inline-block; }
 
-.welcome-text h3 {
-  font-size: 1.875rem; }
-.welcome-text p {
-  line-height: 32px;
-  font-size: 22px; }
+.welcome-text {
+  text-align: center; }
+  .welcome-text h3 {
+    font-size: 1.875rem; }
+  .welcome-text p {
+    line-height: 32px;
+    font-size: 22px; }
 
 #footer {
   font-style: italic;
@@ -54,4 +57,4 @@ li {
   width: 100%; }
 
 .hidden-contact + p {
-  font-size: 16px !important; }
+  font-size: 1rem !important; }

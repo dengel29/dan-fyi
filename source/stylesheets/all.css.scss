@@ -163,10 +163,9 @@ body {
 .copy-to-clipboard {
   outline:none;
   // background-color: rgba(0, 189, 157, .5);
-  border-top: 4px solid black;
+  // border-bottom: 4px solid black;
   text-align:center;
   cursor:pointer;
-  width:fit;
   margin:auto;
 }
 .copy-to-clipboard::after {

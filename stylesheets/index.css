@@ -16,7 +16,7 @@
 .welcome-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 4.5rem; }
+  margin-bottom: 1.5rem; }
 
 ul {
   list-style: none; }
@@ -27,10 +27,10 @@ li {
 .welcome-text {
   text-align: center; }
   .welcome-text h3 {
-    font-size: 1.875rem; }
+    font-size: 2.875rem; }
   .welcome-text p {
-    line-height: 32px;
-    font-size: 22px; }
+    line-height: 2rem;
+    font-size: 1.375rem; }
 
 #footer {
   font-style: italic;

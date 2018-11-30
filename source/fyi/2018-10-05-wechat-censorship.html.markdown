@@ -1,6 +1,6 @@
 ---
 
-title: A Title of An Article on WeChat Censorship
+title: Using Tencent's Text Censorship API
 date: 2018-10-05 09:04 UTC
 tags:
 layout: article_layout

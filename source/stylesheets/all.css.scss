@@ -1,5 +1,5 @@
 $source-sans: 'Source Sans Pro', sans-serif;
-$link-underline: linear-gradient(to bottom, rgba(124, 198, 254, .0) 75%, rgba(124, 198, 254, .7
+$link-underline: linear-gradient(to bottom, rgba(124, 198, 254, .0) 75%, rgba(0, 189, 157, .5
 )80%);
 @charset "utf-8";
 
@@ -10,9 +10,6 @@ $link-underline: linear-gradient(to bottom, rgba(124, 198, 254, .0) 75%, rgba(12
 }
 
 body {
-/*   width: 100%;
-  height: 100vh; */
-  background: linear-gradient(105deg, #F0F4F6, #FFFFFF);
   font-family: $source-sans;
 }
 
@@ -139,18 +136,18 @@ body {
   }
 
 #footer-contact-button{
-    padding: 1rem 3rem;
+    padding: 1.7rem 1.7rem;
     color: white;
-    background-color: rgba(0, 189, 157, 1);
-    border-radius: 3rem;
+    background-color: rgba(0, 189, 157, .8);
+    border-radius: 1rem;
     transition: ease 2s;
     /* align-self: flex-end; */
     text-align: center;
-    width: 7.75rem;
+
   }
 
   #footer-contact-button:hover, #footer-contact-button:click{
-    padding: 1.5rem 3.5rem;
+    // padding: 1.5rem 3.5rem;
   }
 
   .footer-container {
@@ -167,14 +164,34 @@ body {
   text-align:center;
   cursor:pointer;
   margin:auto;
+  padding-right: .6rem;
+  transition:2s;
+  opacity:.8;
 }
-.copy-to-clipboard::after {
-  position: absolute;
-  top: 0.1875rem;
-  left: 0rem;
-  width: 1.3125rem;
-  height: 0px;
-  background: black;
+
+.copy-to-clipboard::hover {
+  outline:none;
+  background-color: rgba(0, 189, 157, .5);
+  border-bottom: 4px solid black;
+  text-align:center;
+  cursor:pointer;
+  margin:auto;
 }
+
+.copy-to-clipboard p:active {
+  color: rgba(0, 189, 157, .5);
+  text-decoration: underline;
+
+}
+
+// .copy-to-clipboard:active {
+//   border-top: .3rem solid rgba(0, 189, 157, .5);
+//   border-right: .7rem solid rgba(0, 189, 157, .5);
+// }
+
+
+
+
+
 
 

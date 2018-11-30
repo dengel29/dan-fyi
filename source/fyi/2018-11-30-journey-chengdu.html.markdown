@@ -1,7 +1,7 @@
 ---
 
 title: (Sort of) Winning A Hackathon
-date: 2018-11-30 12:41 UTC
+date: 2018-11-30
 tags:
 layout: article_layout
 slug: journey-chengdu

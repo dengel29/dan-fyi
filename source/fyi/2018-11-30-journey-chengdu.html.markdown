@@ -8,7 +8,6 @@ slug: journey-chengdu
 
 ---
 
-
 # Simulating 'Fog of War' and Winning a Hackathon
 
 <p class="subtitle">Ditching safe ideas and building something cool in 48 hours</p>

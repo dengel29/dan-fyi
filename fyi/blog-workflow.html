@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link href="/stylesheets/monokai-sublime.css" rel="stylesheet" /><link href="/stylesheets/article.css" rel="stylesheet" /><link href="/stylesheets/all.css" rel="stylesheet" />
+   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+</head>
+
+<body>
+   <script src="/javascripts/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+   <ul class="nav-grid">
+    <li><a href="/">HOME</a></li>
+    <li><a href="/projects.html">PROJECTS</a></li>
+    <li><a href="/article_index.html">ARTICLES</a></li>
+  </ul>
+  <div class="article">
+
+    <h1 id="a-nice-workflow-for-making-new-blog-posts">A Nice Workflow for Making New Blog Posts</h1>
+
+<p class="subtitle">Simple and clean is the way it should be</p>
+
+<p>One of my main objectives when building my personal website was to make sure the workflow for posting new articles would be as easy as possible. At the same time, I also wanted to do this without relying on some third-party CMS, or worse yet, building one on my own.</p>
+
+<p>What I decided on was a really simple mix of HTML and Markdown, supported by Middleman’s blog extension. That’s how this and the rest of the articles I’ve posted got made. The workflow looks like this:</p>
+
+<ol>
+  <li>Draft and complete the article in <a href="https://bear.app">Bear</a> (my note-taking app)</li>
+  <li>Generate a new article in my Middleman project with <code>middleman article TITLE</code></li>
+  <li>Fill in the front-matter for title, tags, date, slug</li>
+  <li>Use the ‘Copy As Markdown’ option in Bear</li>
+  <li>Copy the MD article into my project</li>
+  <li>Preview then publish!</li>
+</ol>
+
+<p>This affords me a lot of flexibility despite the lack of CMS. For instance, if I want to publish a blog post featuring some media I haven’t used in previous articles, I can just deal with the styling when I have to. And because all articles use the article_layout which all use the same stylesheet, I’ll have that for the next instance I use that type of media.</p>
+
+<p>I also get all the nice little benefits of Middleman’s blog extension, namely the customizable front-matter, the ability to ‘unpublish’ an article without deleting it, all without relying on a chunky CMS. This way I can focus on the content, be 100% in control of the style and create new articles with ease.</p>
+
+<p>There are so many ways to approach making a blog and I’m sure there are some drawbacks to this way, but this way really seems to make sense to me and has been a snap so far!</p>
+
+
+  </div>
+  <a href="/article_index.html">Articles</a>
+</body>
+</html>

@@ -1,9 +1,5 @@
-.nav-grid li:nth-child(1) {
-  background: linear-gradient(to bottom, rgba(0, 189, 157, 0) 85%, rgba(0, 189, 157, 0.5) 70%);
-  border-radius: 3px;
-  color: black;
-  cursor: none;
-  z-index: 2; }
+.nav-grid {
+  display: none; }
 
 .underline {
   text-decoration: none;
@@ -14,9 +10,7 @@
   cursor: pointer; }
 
 .welcome-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 4rem; }
 
 ul {
   list-style: none; }
@@ -25,12 +19,14 @@ li {
   list-style: inline-block; }
 
 .welcome-text {
-  text-align: center; }
+  margin-left: 5%;
+  min-width: 80%; }
   .welcome-text h3 {
-    font-size: 2.875rem; }
+    font-size: 4.875rem;
+    margin-top: 0.9rem; }
   .welcome-text p {
-    line-height: 2rem;
-    font-size: 1.375rem; }
+    line-height: 2.5rem;
+    font-size: 2rem; }
 
 #footer {
   font-style: italic;

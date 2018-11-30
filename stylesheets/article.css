@@ -6,6 +6,10 @@
   cursor: none;
   z-index: 2; }
 
+h1 {
+  line-height: 2rem;
+  margin-bottom: .9rem; }
+
 .article {
   text-align: left;
   margin-left: 1%;
@@ -32,16 +36,19 @@ br {
   line-height: 2.25rem; }
 
 p {
-  font-size: 1.125rem; }
+  font-size: 1.225rem;
+  line-height: 1.7rem; }
 
 .container {
   padding-right: 10em;
   border-right: 2rem black solid; }
 
 .subtitle {
-  font-size: 1.375rem;
+  font-size: 1.5rem;
   border-bottom: 3px solid;
-  padding-bottom: 0.25rem; }
+  padding-bottom: 0.25rem;
+  font-style: italic;
+  margin-top: 0rem; }
 
 blockquote {
   border-left: 0.5px grey solid;

@@ -19,7 +19,7 @@ Time.zone = "Beijing"
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
 
-page "/fyi/*", :layout => "article_layout"
+page "/logs/*", :layout => "article_layout"
 page "/", :layout => "layout"
 #
 # A path which all have the same layout
@@ -46,7 +46,7 @@ page "/", :layout => "layout"
 # end
 
 activate :blog do |blog|
-  blog.prefix = "fyi"
+  blog.prefix = "logs"
   blog.permalink = "{slug}.html"
 end
 

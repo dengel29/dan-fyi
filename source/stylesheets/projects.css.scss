@@ -1,6 +1,16 @@
 $neat-underline: linear-gradient(to bottom, rgba(0, 189, 157, .0) 85%, rgba(0, 189, 157, .5)70%);
+$main-color: #02947b;
+$main-color-light: rgba(0, 189, 157, 0.1);
+$main-color-gradient: linear-gradient(220deg, rgba(0, 189, 157, .4), rgba(0, 189, 157, .7));
+
 $proj-box-shadow: 0.08rem 0.06rem 0.0rem 0.1rem;
-$proj-box-border-rad: 0.5rem;
+$proj-box-border-rad: 0.4rem;
+$proj-box-border-color: rgba(0, 189, 157, .5);
+
+$sticker-head: linear-gradient(190deg, rgba(243, 243, 72, 0.1), rgba(239, 14, 222, .2)), url("../images/sticker_2.png");
+$journey-head: linear-gradient(10deg, rgba(88, 169, 30, 0.1), rgba(88, 169, 30, 0.2)), url("../images/journey_3.png");
+$wagon-head: linear-gradient(10deg, rgba(222, 62, 55, 0.13), rgba(222, 62, 55, 0.15)), url("../images/lewagon-head.webp");
+$volunteerus-head: linear-gradient(30deg, rgba(82, 222, 55, 0.15), rgba(82, 222, 55, 0.15)), url("../images/handsin.jpg");
 
 %card-effects {
   border-radius: $proj-box-border-rad;
@@ -25,40 +35,84 @@ $proj-box-border-rad: 0.5rem;
   }
 
 .projects {
-/* `````previous style````` */
-/*   padding-left: 15px;
-  padding-right: 30px;
-  display:flex;
-  flex-direction: column;
-  max-width: 1020px; */
-
   display: grid;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin:auto;
   justify-content:center;
-  grid-template-columns: repeat(auto-fill, minmax(21.25rem, .85fr));
+  grid-template-columns: minmax(23rem, .5fr);
+  // grid-template-rows: auto-fit;
   column-gap: 2%;
 
+}
 
+.expand-button {
+  background: $main-color-gradient;
+  display:flex;
+  font-weight: bold;
+  justify-content:center;
+  align-content:center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  border-radius: 0px 0px 3px 0px;
+  margin:auto;
+}
+
+.bg {
+  background: $main-color-gradient;
+  // opacity: 0;
+  z-index: 2;
 }
 
 .project {
-  display: grid;
-  grid-template-rows: minmax(2.5rem, 3.125rem) 1fr max-content;
-  row-gap: 0.625rem;
-  padding:  1.25rem 1.25rem 1.25rem 1.25rem;
+  // display: grid;
+  // grid-template-rows: minmax(2.5rem, 3.125rem) 1fr max-content;
+  // row-gap: 0.625rem;
+  // padding:  1.25rem 1.25rem 1.25rem 1.25rem;
   margin-bottom: 2.25rem;
+  transition-duration: 0.5s;
 }
 
-.mid-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+.card-head {
+  // background-color: $main-color-gradient;
+  border-radius: 3px 3px 0px 0px;
+  background-position: center;
+  height: 18rem;
+  width: auto;
+  // opacity:1;
 }
 
-.sticker-img {
-  @extend %circ-proj-img
+#sticker-head {
+  background-image: $sticker-head;
+  background-size: cover;
+  // -webkit-clip-path: polygon(0 0%, 100% 6%, 100% 100%, 0% 100%)
 }
+
+#journey-head {
+  background-image: $journey-head;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  // background-clip:;
+  // max-width:inherit;
+  // background-repeat: no-repeat;
+  // -webkit-clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 100%)
+}
+
+#wagon-head {
+  background-image: $wagon-head;
+  background-size: cover;
+  // -webkit-clip-path: polygon(0 0, 100% 6%, 100% 100%, 0% 100%)
+}
+
+#volunteerus-head {
+  background-image: $volunteerus-head;
+  background-size: cover;
+  // -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%)
+}
+
+
 
 .journey-img {
   @extend %circ-proj-img
@@ -73,71 +127,75 @@ $proj-box-border-rad: 0.5rem;
   width: 75%;
 }
 
-.mid-row .skill-list {
+.section{
+  display: flex;
+  border-top:1rem $main-color-light;
+  border-bottom:1rem $main-color-light;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.section-title{
+  padding-left: .2rem;
+  max-width:3rem;
+  justify-content:center;
+  // padding-right: .5rem;
+  // background:linear-gradient(to left, rgba(0, 189, 157, 1), rgba(0, 189, 157, 1));
+  font-weight: 600;
+}
+
+.section-details {
+  margin-left: 1rem;
+  margin-right: .3rem;
+}
+
+.skill-list {
  margin-left: 0.625rem;
 }
 
 @media (hover:hover) {
   %card-hover {
-    transition-duration: .5;
-    transform: translate(6px,-4px);
-    transition-timing-function: ease-in-out;
+    transition-duration: .1;
+    transform: translate(0px,-18px);
+    box-shadow: 0px 7px 0px 0px $main-color;
+    border-radius: $proj-box-border-rad;
+    // transition-timing-function: ease-in-out;
   }
 
-  .shadow-sticker:hover {
-    @extend %card-hover
+  .project:hover {
+    @extend %card-hover;
   }
-
-  .shadow-journey:hover {
-    @extend %card-hover
-  }
-
-  .shadow-wagon:hover {
-    @extend %card-hover
-  }
-
-  .shadow-volunteer:hover {
-    @extend %card-hover
-  }
-}
-
-.shadow-sticker {
-  box-shadow: $proj-box-shadow rgba(144, 19, 254, .7);
-  @extend %card-effects
-}
-
-.shadow-journey {
-  box-shadow: $proj-box-shadow rgba(255, 197, 61,.7);
-  @extend %card-effects
-}
-
-.shadow-wagon {
-  box-shadow: $proj-box-shadow rgba(194, 47, 47, .7);
-  @extend %card-effects
-}
-
-.shadow-volunteer {
-  box-shadow: $proj-box-shadow rgba(82, 190, 85, .7);
-  @extend %card-effects
 }
 
 h3 {
-
   z-index:1;
-  // background:none;
-  max-height: 6.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 0rem;
+  color: white;
+  text-shadow: 1px 1px 2px grey;
+}
+
+.proj-icon {
+  height:2rem;
+  width:2rem;
+  text-shadow: 1px 1px 2px grey
 }
 
 .project-title {
   display:flex;
   align-items:center;
   font-size: 1.75rem;
-  text-align: center;
-  grid-column: 1/ -1;
-  grid-row: 1;
+  display:flex;
+  align-content: center;
+  // align-items: center;
+  padding: 0rem;
+  // margin: 0rem;
   justify-content:center;
+  margin-block-start: .1rem;
 
+}
+
+.card-title{
+  margin:.5rem;
 }
 
 .project-description {
@@ -146,16 +204,20 @@ h3 {
   text-align:center;
   font-family:'Source Sans Pro', sans-serif;
   font-size: 1.125rem;
+  transition: display;
+  transition-duration: 0.5s;
+  background: $main-color-light;
+  background-size: 100%;
+  height:100%;
+  // border-left: solid 4px $main-color;
+  // border-right: solid 4px $main-color;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 1.5s ease-in;
+  -webkit-transition: max-height .5s;
 }
 
-.skill-list ul{
-  list-style: none;
-  border-left: 2px dotted black;
-}
-
-.skill-list ul li {
-  font-weight: bolder;
-  margin-left: -1.5625rem;
-  line-height: 1.25rem;
-
+.uncollapse {
+  max-height: 20rem;
+  transition: max-height 1.5s ease-in-out;
 }

@@ -15,6 +15,21 @@ h1 {
   margin-bottom: .9rem;
 }
 
+.tldr-container {
+  display:flex;
+  justify-content: center;
+}
+
+.tldr {
+  font-size:1.5rem;
+  margin:auto;
+  background-color: rgba(0, 140, 130, .75);
+  border-radius:.3rem;
+  color:white;
+  max-width: 85%;
+  padding: 1.1rem;
+}
+
 .article {
   text-align: left;
   margin-left: 1%;

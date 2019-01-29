@@ -23,123 +23,181 @@
     
 <head>
   <link rel="stylesheet" href="stylesheets/projects.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600" rel="stylesheet">
 </head>
 <body>
-
-
-
-
   <div class="projects">
     <!-- one single project -->
-    <div class="project shadow-sticker">
-
-      <div class="project-title"><h3>StickerMachine</h3></div>
-
-      <div class="mid-row">
-        <img src="images/sticker-logo.png" class="sticker-img">
-
-        <div class="skill-list">
-          <ul>
-            <li>WeChat</li>
-            <li>ES6</li>
-            <li>Ruby</li>
-            <li>Rails</li>
-            <li>Redis</li>
-            <li>Dokku</li>
-            <li>Server-Setup</li>
-            <li>Project-Mgmt</li>
-          </ul>
+    <div class="project" id="project-sticker">
+      <div class="card-head bg" id="sticker-head">
+        <div class="project-title">
+          <img class="proj-icon" src="../images/sticker-logo.png"><h3 class="card-title">StickerMachine</h3>
         </div>
+
       </div>
 
       <div class="project-description">
-        <strong>StickerMachine is a WeChat miniprogram</strong> –– a personal project to further evaulate WeChat miniprograms' advantages and disadvantages. The program is a GIF (or "sticker") search engine within WeChat, utilizing the Giphy API. This project gave me even better familiarity with the advantages and hurdles of building a WeChat miniprogram – such as <a href="">censorship</a> –, and built something fun to boot.<br><br>
-        <strong>My role on this project </strong> was as project manager and backend developer. To try StickerMachine, <a href="">click here to show the QR code.</a>
+        <div class="section">
+          <div class="section-title">
+            Tech Used
+          </div>
+          <div class="section-details skill-list">
+            | WeChat |
+            | ES6 |
+            | Ruby on Rails |
+            | Redis |
+            | Dokku |
+            | i18n |
+            | Project Management |
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-title">
+            Brief
+          </div>
+          <div class="section-details">
+            This WeChat miniprogram is a GIF (or "sticker") search engine utilizing the Giphy API.
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">
+            Links
+          </div>
+          <div class="section-details">
+            <a href="http://dan-engel.fyi/logs/wechat-censorship.html">Using Tencent's Censorship API</a> | <a href="https://www.youtube.com/watch?v=LnJNU5GrPpQ">Promo Video</a> | <a href="http://thegraceyang.com/projects/sticker-machine.html">Designing The App</a>
+          </div>
+        </div>
       </div>
 
     </div> <!-- end of individual project -->
 
+    <div class="project" id="project-journey">
+      <div class="card-head" id="journey-head">
 
-    <div class="project shadow-journey">
-      <div class="project-title">
-        <h3>Journey Into Chengdu</h3></div>
-        <div class="mid-row">
-          <img src="images/journey-logo.svg" alt="" class="journey-img">
-          <div class="skill-list">
-          <ul>
-            <li>WeChat</li>
-            <li>Tencent Maps</li>
-            <li>WXML</li>
-            <li>WXSS</li>
-            <li>ES6</li>
-            <li>Ruby on Rails</li>
-            <li>PostGIS</li>
-          </ul>
+        <div class="project-title">
+          <img class="proj-icon" src="../images/journey-logo.svg"><h3 class="card-title">Journey Into Chengdu</h3>
+        </div>
       </div>
+
+
+      <div class="project-description">
+        <div class="section">
+          <div class="section-title">
+            Tech Used
+          </div>
+          <div class="section-details skill-list">
+            | Tencent Maps |
+            | ES6 |
+            | Ruby on Rails |
+            | WXML/WXSS |
+            | PostGIS |
+          </div>
         </div>
-        <div class="project-description">
-          <strong>Journey into Chengdu is a map-based WeChat miniprogram</strong> , winner of the People's Choice Award at the 2017 "Code For City" Hackathon in Chengdu. This miniprogram turns city exploration into a game, uncovering your city as you traverse it, similar to the "fog of war" feature in video games.<br><br>
-
-          A promo video demonstrating the miniprogram can be seen <a href="https://www.youtube.com/watch?v=jNQcDpv_7ao">here.</a>
-
-          <br><br>
-
-        On this project I compared map APIs and components, selecting and then implementing the most appropriate solution for our use case. The code for the backend can be found <a href="https://github.com/stevejackson/journey-into-chengdu-rails-api">here.</a>
+        <div class="section">
+          <div class="section-title">
+            Brief
+          </div>
+          <div class="section-details">
+            This miniprogram turns city exploration into a game, uncovering your city as you traverse it, similar to the "fog of war" feature in video games.
+          </div>
         </div>
+
+        <div class="section">
+          <div class="section-title">
+            Links
+          </div>
+          <div class="section-details">
+            <a href="http://dan-engel.fyi/logs/journey-chengdu.html">Winning A Hackathon</a> | <a href="https://www.youtube.com/watch?v=jNQcDpv_7ao">Promo Video</a> |  <a href="https://mp.weixin.qq.com/s/x5X7dCA_kdx_tkw4XcniNA">FCC Hackathon Review</a>
+          </div>
+        </div>
+      </div>
     </div> <!-- end of individual project -->
 
-    <div class="project shadow-wagon">
-      <div class="project-title"><h3>Le Wagon</h3></div>
-      <div class="mid-row">
-        <img src="images/wagon.png" alt="" class="wagon-img">
-        <div class="skill-list">
-          <ul>
-            <li>SQL</li>
-            <li>ActiveRecord</li>
-            <li>Ruby on Rails</li>
-            <li>Testing</li>
-            <li>Sinatra</li>
-          </ul>
+    <div class="project" id="project-wagon">
+      <div class="card-head" id="wagon-head">
+        <div class="project-title">
+          <img class="proj-icon" src="../images/wagon.png"><h3 class="card-title">Le Wagon</h3>
         </div>
       </div>
+
+
       <div class="project-description">
-        Le Wagon is an international code bootcamp. I have been involved with Le Wagon Chengdu in various capacities, recently teaching the database portion of bootcamp and mentoring final week projects, often WeChat miniprograms. <br><br>
+        <div class="section">
+          <div class="section-title">
+            Skills Used
+          </div>
+          <div class="section-details skill-list">
+            | Ruby on Rails |
+            | PostGres |
+            | sqlite |
+            | Sinatra |
+            | ActiveRecord |
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-title">
+            Brief
+          </div>
+          <div class="section-details">
+            Le Wagon is the #1 rated code bootcamp in the world. I teach the OOP and database modules of bootcamp.
+          </div>
+        </div>
 
-        I originally began building WeChat miniprograms here and continue to work on them with the Chengdu and wider coding community in China.
-
-        <br><br>
-
-        As of October 2018, I am still teaching and mentoring when bootcamp is in session.
-      </div>
-    </div>
-    <!-- end of individual project -->
-    <div class="project shadow-volunteer">
-      <div class="project-title"><h3>VolunteerUs</h3></div>
-      <div class="mid-row">
-        <img src="images/volunteerus.JPG" alt="" class="volunteer-us-img">
-        <div class="skill-list">
-          <ul>
-            <li>Ruby on Rails</li>
-            <li>SQL</li>
-            <li>ActiveRecord</li>
-            <li>Testing</li>
-            <li>Sinatra</li>
-            <li>Custom QR</li>
-            <li>SMS notifs.</li>
-          </ul>
+        <div class="section">
+          <div class="section-title">
+            Links
+          </div>
+          <div class="section-details">
+            <a href="">Teaching At Le Wagon (WIP)</a> | <a href="https://www.coursereport.com/schools/le-wagon">Reviews of Le Wagon</a> |  <a href="https://lewagon.com">Le Wagon Homepage</a>
+          </div>
         </div>
       </div>
-      <div class="project-description">
-        VolunteerUs is a platform web app + WeChat miniprogram to connect volunteers with events and event organizers. VolunteerUs is the product of a 2-week product sprint and one of the earliest WeChat miniprograms built by a non-Chinese team. <br><br>
+    </div> <!-- end of individual project -->
 
-        This was the culminating project for Le Wagon Batch #88 in Chengdu. The code for the Rails project can be seen <a href="https://github.com/royyirao2017/volunteer-us-final/">here</a>, and the miniprogram code can be found <a href="https://github.com/dengel29/VolunteerUs-MP">here.</a>
-
-        <br><br>
-
-        For this project I managed the db, routing, and built the API with Rails. The project is no longer maintained.
+    <div class="project" id="project-volunterus">
+      <div class="card-head" id="volunteerus-head">
+        <div class="project-title">
+          <img class="proj-icon" src="../images/volunteerus-logo.png"><h3 class="card-title">VolunteerUs</h3>
+        </div>
       </div>
-    </div>
-  </div>
+
+
+      <div class="project-description">
+        <div class="section">
+          <div class="section-title">
+            Skills Used
+          </div>
+          <div class="section-details skill-list">
+            | TDD |
+            | Custom QR Codes |
+            | Ruby on Rails |
+            | SMS Notifications |
+            | User Auth |
+            | REST API |
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-title">
+            Brief
+          </div>
+          <div class="section-details">
+            VolunteerUs is a desktop and mobile platform to help event organizers find volunteers.
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">
+            Links
+          </div>
+          <div class="section-details">
+            <a href="">Teaching At Le Wagon (WIP)</a> | <a href="https://www.coursereport.com/schools/le-wagon">Reviews of Le Wagon</a> |  <a href="https://lewagon.com">Le Wagon Homepage</a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end of individual project -->
+
+  <script type="text/javascript" src="../javascripts/projects.js"></script>
 </body>
 
     </div>

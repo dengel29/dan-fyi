@@ -149,6 +149,18 @@ $volunteerus-head: linear-gradient(30deg, rgba(82, 222, 55, 0.15), rgba(82, 222,
   margin-right: .3rem;
 }
 
+.tippy-qr {
+  border: 1px dotted black;
+  border-radius: 2px;
+}
+
+.tippy-qr p {
+  margin:0rem;
+  font-size:1rem;
+  font-style:italic;
+
+}
+
 .skill-list {
  margin-left: 0.625rem;
 }

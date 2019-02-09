@@ -1,4 +1,4 @@
-$source-sans: 'Source Sans Pro', sans-serif;
+$font-family: 'Raleway';
 $link-underline: linear-gradient(to bottom, rgba(124, 198, 254, .0) 75%, rgba(0, 189, 157, .5
 )80%);
 @charset "utf-8";
@@ -10,7 +10,7 @@ $link-underline: linear-gradient(to bottom, rgba(124, 198, 254, .0) 75%, rgba(0,
 }
 
 body {
-  font-family: $source-sans;
+  font-family: $font-family;
 }
 
 /* FADE IN CODE START~~~~~~~~~~~*/

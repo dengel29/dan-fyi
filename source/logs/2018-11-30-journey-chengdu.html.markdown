@@ -10,10 +10,9 @@ slug: journey-chengdu
 
 # Simulating 'Fog of War' and Winning a Hackathon
 
-<p class="subtitle">Ditching safe ideas and building something cool in 48 hours</p>
 
 <div class="tldr-container">
-  <p class="tldr"><strong>tl;dr</strong><br> I entered a hackathon with 2 others, we simulated the fog of war effect in video games, encountered some interesting problems and learned quite a bit about the quirks of programming GPS-based services in China.</p>
+  <div class="tldr-label">tl;dr</div><p class="tldr"> I entered a hackathon with 2 others, we simulated the fog of war effect in video games, encountered some interesting problems and learned quite a bit about the quirks of programming GPS-based services in China.</p>
 </div>
 
 In 2017, I entered a city-wide FreeCodeCamp hackathon in Chengdu with designer Grace Yang (@yaycake) and mentor Steve Jackson.

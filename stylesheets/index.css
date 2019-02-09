@@ -23,10 +23,16 @@ li {
   min-width: 80%; }
   .welcome-text h3 {
     font-size: 4.875rem;
-    margin-top: 0.9rem; }
+    margin-top: 0.9rem;
+    margin-block-end: 1rem; }
   .welcome-text p {
     line-height: 2.5rem;
     font-size: 2rem; }
+
+.divider {
+  height: 2.5rem;
+  width: 16rem;
+  background: repeating-linear-gradient(135deg, rgba(0, 189, 157, 0.5), rgba(0, 189, 157, 0.5) 1px, transparent 1px, transparent 6px); }
 
 #footer {
   font-style: italic;

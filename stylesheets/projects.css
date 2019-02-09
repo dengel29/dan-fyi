@@ -19,18 +19,6 @@
   grid-template-columns: minmax(23rem, 0.5fr);
   column-gap: 2%; }
 
-.expand-button {
-  background: linear-gradient(220deg, rgba(0, 189, 157, 0.4), rgba(0, 189, 157, 0.7));
-  display: flex;
-  font-weight: bold;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  width: 100%;
-  height: 30px;
-  border-radius: 0px 0px 3px 0px;
-  margin: auto; }
-
 .bg {
   background: linear-gradient(220deg, rgba(0, 189, 157, 0.4), rgba(0, 189, 157, 0.7));
   z-index: 2; }
@@ -76,12 +64,20 @@
 .section-title {
   padding-left: .2rem;
   max-width: 3rem;
-  justify-content: center;
-  font-weight: 600; }
+  justify-content: center; }
 
 .section-details {
   margin-left: 1rem;
   margin-right: .3rem; }
+
+.tippy-qr {
+  border: 1px dotted black;
+  border-radius: 2px; }
+
+.tippy-qr p {
+  margin: 0rem;
+  font-size: 1rem;
+  font-style: italic; }
 
 .skill-list {
   margin-left: 0.625rem; }
@@ -106,7 +102,8 @@ h3 {
 .project-title {
   display: flex;
   align-items: center;
-  font-size: 1.75rem;
+  font-family: 'Lato';
+  font-size: 1.5rem;
   display: flex;
   align-content: center;
   padding: 0rem;
@@ -120,8 +117,8 @@ h3 {
   grid-row: 3;
   grid-column: 1 / -1;
   text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.125rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
   transition: display;
   transition-duration: 0.5s;
   background: rgba(0, 189, 157, 0.1);

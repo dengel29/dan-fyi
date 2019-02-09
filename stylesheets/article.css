@@ -7,31 +7,44 @@
   z-index: 2; }
 
 h1 {
+  font-family: "Raleway";
   line-height: 2rem;
-  margin-bottom: .9rem; }
+  margin-bottom: .9rem;
+  text-align: center; }
+
+ol {
+  max-width: 33.5rem; }
 
 .tldr-container {
   display: flex;
-  justify-content: center; }
+  border-radius: 1px;
+  background: repeating-linear-gradient(135deg, rgba(0, 189, 157, 0.01), rgba(0, 189, 157, 0.2) 1px, transparent 0.5px, transparent 6px);
+  box-shadow: 4px 5.4px 0.1px 0.3px rgba(33, 37, 41, 0.85);
+  max-width: 44rem;
+  margin: 1.5rem; }
+
+.tldr-label {
+  background-color: rgba(0, 189, 157, 0.9);
+  padding: .5rem;
+  text-align: center;
+  align-content: center;
+  width: 2.5rem; }
 
 .tldr {
-  font-size: 1.5rem;
-  margin: auto;
-  background-color: rgba(0, 140, 130, 0.75);
-  border-radius: .3rem;
-  color: white;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin: 0;
   max-width: 85%;
-  padding: 1.1rem; }
+  padding: 1rem; }
 
 .article {
-  text-align: left;
+  justify-content: center;
   margin-left: 1%;
   padding-left: 4%;
   padding-right: 5%;
   min-width: 330px;
   max-width: 60vw;
-  line-height: 22px;
-  grid-template: 1/1; }
+  line-height: 22px; }
 
 :not(pre) code {
   padding: 1px 3px 3px 3px;
@@ -50,7 +63,8 @@ br {
 
 p {
   font-size: 1.225rem;
-  line-height: 1.7rem; }
+  line-height: 1.7rem;
+  font-family: 'Lato', sans-serif; }
 
 .container {
   padding-right: 10em;
@@ -58,7 +72,6 @@ p {
 
 .subtitle {
   font-size: 1.5rem;
-  border-bottom: 3px solid;
   padding-bottom: 0.25rem;
   font-style: italic;
   margin-top: 0rem; }
@@ -66,7 +79,7 @@ p {
 blockquote {
   border-left: 0.5px grey solid;
   padding-left: 15px;
-  max-width: 33.75rem; }
+  max-width: 33.5rem; }
 
 blockquote p {
   font-weight: lighter; }

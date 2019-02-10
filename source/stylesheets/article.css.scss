@@ -3,6 +3,8 @@ $main-color: rgba(0, 189, 157, 0.9);
 $main-color-light: rgba(0, 189, 157, 0.3);
 $font-family-head:'Raleway';
 $font-family-body:'Lato';
+$p-font-size: 1.225rem;
+
 
 .nav-grid li:nth-child(3n) {
  background: linear-gradient(to bottom, rgba(0, 189, 157, .0
@@ -19,6 +21,16 @@ h1 {
   line-height: 2rem;
   margin-bottom: .9rem;
   text-align:center;
+}
+
+.img-container {
+  display:flex;
+  justify-content: center
+}
+
+img {
+  width:25rem;
+  height:20rem;
 }
 
 ol {
@@ -85,7 +97,7 @@ br {
 }
 
 p {
-  font-size: 1.225rem;
+  font-size: $p-font-size;
   line-height: 1.7rem;
   font-family: 'Lato', sans-serif;
 }
@@ -108,15 +120,18 @@ blockquote {
   border-left:0.5px grey solid;
   padding-left: 15px;
   max-width: 33.5rem;
+  font-size: $p-font-size;
+  font-weight:300;
 }
-
-blockquote p {
-  font-weight: lighter;
-}
-
 
 h2 {
+  text-align: center;
+  font-size:1.7rem;
+}
 
+html {
+    visibility: visible;
+    opacity: 1;
 }
 
 

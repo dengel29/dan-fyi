@@ -12,6 +12,14 @@ h1 {
   margin-bottom: .9rem;
   text-align: center; }
 
+.img-container {
+  display: flex;
+  justify-content: center; }
+
+img {
+  width: 25rem;
+  height: 20rem; }
+
 ol {
   max-width: 33.5rem; }
 
@@ -79,7 +87,14 @@ p {
 blockquote {
   border-left: 0.5px grey solid;
   padding-left: 15px;
-  max-width: 33.5rem; }
+  max-width: 33.5rem;
+  font-size: 1.225rem;
+  font-weight: 300; }
 
-blockquote p {
-  font-weight: lighter; }
+h2 {
+  text-align: center;
+  font-size: 1.7rem; }
+
+html {
+  visibility: visible;
+  opacity: 1; }

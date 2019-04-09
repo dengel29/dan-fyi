@@ -203,20 +203,19 @@ h3 {
   text-align:center;
   font-family:'Lato', sans-serif;
   font-size: 1.1rem;
-  transition: display;
-  transition-duration: 0.5s;
+  // transition: display;
+  // transition-duration: 0.5s;
   background: $main-color-light;
   background-size: 100%;
-  height:100%;
-  // border-left: solid 4px $main-color;
-  // border-right: solid 4px $main-color;
-  max-height: 0px;
+  height:0px;
+  // max-height: 0px;
   overflow: hidden;
-  transition: max-height 1.5s ease-in;
-  -webkit-transition: max-height .5s;
+  transition: height 1.5s ease-in;
+  -webkit-transition: height .5s;
 }
 
 .uncollapse {
-  max-height: 20rem;
-  transition: max-height 1.5s ease-in-out;
+  height: auto;
+  transition: height 1.5s ease-in-out;
+  -webkit-transition: height .5s;
 }

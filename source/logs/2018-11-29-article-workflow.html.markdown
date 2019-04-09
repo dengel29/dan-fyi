@@ -9,6 +9,13 @@ slug: blog-workflow
 ---
 # A Nice Workflow for Making New Blog Posts
 
+<div class="tldr-container">
+  <div class="tldr-label">tl;dr</div>
+  <p class="tldr"> 
+    A short post on my current blog workflow.
+  </p>
+</div>
+
 <p class="subtitle">Simple and clean is the way it should be</p>
 
 One of my main objectives when building my personal website was to make sure the workflow for posting new articles would be as easy as possible. At the same time, I also wanted to do this without relying on some third-party CMS, or worse yet, building one on my own.

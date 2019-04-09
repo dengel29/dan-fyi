@@ -9,6 +9,7 @@ GIT
       ptools
 
 GEM
+  remote: https://rubygems.org/
   specs:
     activesupport (5.0.7)
       concurrent-ruby (~> 1.0, >= 1.0.2)
@@ -134,4 +135,4 @@ DEPENDENCIES
   wdm (~> 0.1.0)
 
 BUNDLED WITH
-   1.16.2
+   1.17.1

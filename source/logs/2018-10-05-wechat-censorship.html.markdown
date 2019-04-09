@@ -8,9 +8,14 @@ slug: wechat-censorship
 
 ---
 
-# msgSecCheck
+# Using Tencent's Text Censorship API
 
-<p class="subtitle">A Guide on How to Use WeChat’s Text Censorship API</p>
+<div class="tldr-container">
+  <div class="tldr-label">tl;dr</div>
+  <p class="tldr"> 
+    A short technical walkthrough on what you Nned to do to use Tencent's censorship API
+  </p>
+</div>
 
 ##  Intro: What is this and why
 Me and <a class="highlight" href="http://thegraceyang.com/" target="_blank">@yaycake</a> made a miniprogram. Because of our circumstances – hosting on a friends server and with our miniprogram registered under another friend’s ID (as foreign developers without a company) – we felt a responsibility to secure our miniprogram. <br>

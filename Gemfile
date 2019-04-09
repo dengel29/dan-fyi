@@ -1,3 +1,5 @@
+source 'https://rubygems.org'
+
 # If you do not have OpenSSL installed, update
 # the following line to use "http://" instead
 # source "https://gems.ruby-china.org/"

@@ -28,24 +28,37 @@
     <div class="welcome-container">
 
       <div class="welcome-text">
-        <h3>Dan Engel</h3>
-        <div class="divider"></div>
-        <p>
-          <a href="/projects" class="underline">Projects</a><br>
-        </p>
+        <header>
+          <h3>Dan Engel</h3> 
+          <div class="divider"></div>
+        </header> 
+        <div class="flex">
+          <div class="grid">
+            <div class="grid-item-one">
+              <p>
+                <a href="/projects" class="underline">Projects</a><br>
+              </p>
 
-        <p>
-          <a href="/logs" class="underline">Bloggy Stuff</a> <br>
-        </p>
+              <p>
+                <a href="/logs" class="underline">Blog</a> <br>
+              </p>
 
-        <p>
-          <a class="underline"><label for="contact-show" >Contact Me
-          </label></a>
-        </p>
+              <p>
+                <a class="underline"><label for="contact-show" >Contact Me
+                </label></a>
+              </p>
+            </div>
+            <div class="grid-item-two">
+              <p>
+                [Latest Post]<br><a href="/logs/values">There are some things I probably won't put on my LinkedIn.</a>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  </body>
+</body>
 
 
     </div>
@@ -53,32 +66,28 @@
 
       <input type="checkbox" id="contact-show" hidden>
 
-      <div class="hidden-contact" style="">
+      <div class="hidden-contact">
 
-          <div class="btn copy-to-clipboard" data-clipboard-text="dengel29@gmail.com" >
+          <div class="btn copy-to-clipboard" data-clipboard-text="im@dan-engel.fyi" >
             <p>
 
               <i class="far fa-paper-plane" style="margin-bottom:1rem; color:rgba(0, 189, 157, 1)"></i>
-              <br>
-              dengel29 [at] gmail.com
+              
+              im [at] dan-engel.fyi
               <i class="fas fa-paste" style="font-size:0.9rem; color:grey"></i>
 
             </p>
           </div>
-
-
-
 
           <div class="btn copy-to-clipboard" data-clipboard-text="dp_engel">
            <p>
               <i class="fab fa-weixin" style="font-size: 1.2rem; margin-bottom:1rem; color:rgba(0, 189, 157, 1)"></i>
               <!-- <div="flash">Copied!</div> -->
-              <br>
               dp_engel
               <i class="fas fa-paste" style="font-size:0.9rem; color:grey"></i>
             </p>
           </div>
-
+          <p style="color: grey; text-align:center; font-size: .7rem">Click to copy to clipboard</p>
       </div>
 
       <label class="footer-label" id="contact-info" for="contact-show">
@@ -90,8 +99,8 @@
 
 
     <!-- ~~~~~~~~~~~~~~~~~ -->
-    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" async></script>
-     <script src="../javascripts/copyToClipboard.js" async> </script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+    <script src="../javascripts/copyToClipboard.js"> </script>
 
   </body>
 </html>

@@ -7,7 +7,7 @@
   z-index: 2; }
 
 h1 {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   line-height: 2rem;
   margin-bottom: .9rem;
   text-align: center; }

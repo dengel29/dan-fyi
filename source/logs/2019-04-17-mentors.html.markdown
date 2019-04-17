@@ -1,0 +1,47 @@
+---
+title: Bootcamp Mentors
+layout: article_layout
+date: 2019-04-17
+slug: mentors
+tags:
+---
+
+# Bootcamp Mentors
+
+<div class="tldr-container">
+  <div class="tldr-label">tl;dr</div>
+  <p class="tldr">
+    Anyone can learn how to code, but how to do it? You can learn anything on the internet, but that often lacks human connection. Here are my two cents about why mentors are the secret sauce for a good bootcamp experience.
+  </p>
+</div>
+
+## The Question
+One thing I hear from skeptics about my bootcamp experience is “but you could’ve learned all that stuff online, right?” The answer to that question is: Yes. Well, probably. But “learning the stuff” is, I think, a narrow scope to look at the value proposition of a bootcamp.
+
+I get why people ask this question: this wave of bootcamps is a weird commercial force that seems to promise a shortcut into a _discipline_, something that people spend years learning. People should be skeptical.  
+
+I can’t speak beyond my own experience, but to me, there is one clear advantage of being in a bootcamp, and that’s **the people** it puts you in contact with: peers, yes, but more importantly, mentors.
+
+## What’s a mentor?
+
+Prior to my bootcamp experience, I’ve never really had anyone that I consider a mentor **in anything** that I was working on until I joined Le Wagon and became part of that network. Now, I have a few individuals who fill that role in my life and it’s been enormously helpful. 
+
+But what do I mean by mentor? 
+
+During bootcamp they were my teachers, teaching new concepts, acting as my rubber ducky and imparting pithy words of wisdom that still stick with me. 
+
+After bootcamp, they’ve helped me with so much, both technical and personal. They’ve joined me (and other Le Wagon grads) in hackathons, they’ve helped me negotiate tricky freelance situations, given me career tips, and more than once they’ve helped pick me up when I’ve felt down and out. I’m writing this now because I recently moved to a new city and have felt particularly isolated and uncertain of myself, my skills, and my direction. 
+
+I didn’t realize it at the time, but they are also so valuable **just by being living examples** that there’s a payoff to the struggle, as opposed to the mythical coding gods of the internet who seem like they emerged from the womb as experts, with impeccable thought processes and style so clean you cannot **help** but like and subscribe®.  When you look at some Youtube or Udemy teachers, you can’t ask them if they struggled and sometimes simply hearing that can make a huge difference. One of my mentors just today put his finger on it said “the biggest fallacy is that this is harder for you than it was for anyone else.” Learning to code is an endeavor that requires endurance, and sometimes hearing words like that can give you a stamina boost. 
+
+## Bootcamp vs Learning from the Internet
+
+My thoughts on learning from the internet (which, news flash, you will still have to do after bootcamp) are mixed. But we should acknowledge that you don’t have a choice: you’ll have to start to self-learn at some point. 
+
+The internet is your universal tool and handbook to solve any coding problem. But it’s also very effective at making you feel inadequate, where everyone is better than you or working on cooler stuff than you. It’s just the nature it.  Many years ago I did try to learn on my own, from the internet (from Daniel Kehoe’s Ruby on Rails course) and it was one of several false starts. The bootcamp experience helped me get over the first few hurdles so I **could** actually start to teach myself more effectively.  
+
+And of course the internet can connect people too, in addition to the things I mentioned earlier. The difference is that human connection is built into the bootcamp model: unless you’re very asocial, you should come out having forged a strong connection to the peers and teachers you experience it with. You also learn to code in the context of coding with others, the importance of which cannot be overstated. To me, there’s huge value in all those things.
+
+## It’s Dangerous to Go Alone
+
+Bootcamp eventually ends and if you’re serious about being a professional coder, it’s really just the beginning. You’re released into the wild and it’s great to be armed with not only the knowledge you gained from bootcamp, but a couple of folks in your corner to back you up when you need it. Speaking for myself, embarking on a new career is a lot less scary when you’ve got those people  backing you up.  And if they’re really good, they’ll be examples for how you can be a good mentor for someone else in the future. 

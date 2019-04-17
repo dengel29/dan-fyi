@@ -3,8 +3,9 @@ $link-underline-border-rad: 3px;
 $nav-underline: linear-gradient(to bottom, rgba(0, 189, 157, .0
 ) 85%, rgba(0, 189, 157, .5
 )70%);
-$link-underline: linear-gradient(to bottom, rgba(124, 198, 254, .0) 75%, rgba(124, 198, 254, .7
-)80%);
+$link-underline: linear-gradient(to bottom, rgba(0, 189, 157, 0.3) 75%, rgba(0, 189, 157, 0.3)80%);
+$main-color: rgba(0, 189, 157, 0.9);
+$main-color-light: rgba(0, 189, 157, 0.3);
 
 
 .nav-grid {
@@ -20,9 +21,63 @@ $link-underline: linear-gradient(to bottom, rgba(124, 198, 254, .0) 75%, rgba(12
   cursor: pointer;
 }
 
+.tldr-container {
+  display:flex;
+  border-radius: 3px;
+  // background-color: $main-color-light;
+  background: repeating-linear-gradient(135deg, rgba(0, 189, 157, 0.02), rgba(0, 189, 157, 0.3) 1px, transparent 2px, transparent 4px);
+  // box-shadow: 4px 5.4px 0.1px 0.3px rgba(33, 37, 41, 0.85);
+  // justify-content: center;
+  max-width: 44rem;
+  margin:1.5rem;
+  transition-duration: 0.7s;
+  a {
+    background: none;
+    margin:auto;
+    padding: .5rem;
+    color: black; 
+    text-decoration: none;
+  }
+}
+
+@media (hover:hover) {
+  %card-hover {
+    transition-duration: .1;
+    transform: translate(0px,-18px);
+    box-shadow: 0px 7px 0px 0px $main-color;
+    background: repeating-linear-gradient(360deg, rgba(0, 189, 157, 0.02), rgba(0, 189, 157, 0.3) 1px, transparent 2px, transparent 4px);
+    // transition-timing-function: ease-in-out;
+  }
+
+  .tldr-container:hover {
+    @extend %card-hover;
+  }
+}
+
+.tldr-label {
+  background-color: $main-color-light;
+  padding:.5rem;
+  text-align: center;
+  // align-content:center;
+  // height:2rem;
+  width: 2.5rem;
+  font-weight: 400;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.tldr {
+  justify-content:center;
+  font-size:1.3rem;
+  margin:0;
+  max-width: 85%;
+  padding: 1rem;
+}
+
 
 header {
   display: flex;
+  margin-top: 3rem;
   justify-content: center;
 }
 

@@ -6,6 +6,8 @@ slug: values
 tags:
 ---
 
+# What I Won't Put On My LinkedIn
+
 <div class="tldr-container">
   <div class="tldr-label">tl;dr</div>
   <p class="tldr">

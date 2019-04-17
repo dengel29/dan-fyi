@@ -1,16 +1,17 @@
 $neat-underline: linear-gradient(to bottom, rgba(0, 189, 157, .0) 85%, rgba(0, 189, 157, .5)70%);
 $main-color: #02947b;
 $main-color-light: rgba(0, 189, 157, 0.1);
-$main-color-gradient: linear-gradient(220deg, rgba(0, 189, 157, .4), rgba(0, 189, 157, .7));
+$main-color-gradient: linear-gradient(220deg, rgba(189, 228, 221, 0.301), rgba(0, 189, 157, .6));
 
 $proj-box-shadow: 0.08rem 0.06rem 0.0rem 0.1rem;
 $proj-box-border-rad: 0.4rem;
 $proj-box-border-color: rgba(0, 189, 157, .5);
 
-$sticker-head: linear-gradient(190deg, rgba(243, 243, 72, 0.1), rgba(239, 14, 222, .2)), url("../images/sticker_2.png");
-$journey-head: linear-gradient(10deg, rgba(88, 169, 30, 0.1), rgba(88, 169, 30, 0.2)), url("../images/journey_3.png");
-$wagon-head: linear-gradient(10deg, rgba(222, 62, 55, 0.13), rgba(222, 62, 55, 0.15)), url("../images/lewagon-head.webp");
-$volunteerus-head: linear-gradient(30deg, rgba(82, 222, 55, 0.15), rgba(82, 222, 55, 0.15)), url("../images/handsin.jpg");
+$kappa-head: linear-gradient(10deg, rgba(71, 71, 52, 0.7), rgba(61, 88, 86, 0.9)), url("../images/kappamon_graphic.svg");
+$sticker-head: linear-gradient(10deg, rgba(71, 71, 52, 0.7), rgba(61, 88, 86, 0.9)), url("../images/sticker_2.png");
+$journey-head: linear-gradient(10deg, rgba(71, 71, 52, 0.7), rgba(61, 88, 86, 0.9)), url("../images/journey_3.png");
+$wagon-head: linear-gradient(10deg, rgba(71, 71, 52, 0.7), rgba(61, 88, 86, 0.9)), url("../images/lewagon-head.webp");
+$volunteerus-head: linear-gradient(10deg, rgba(71, 71, 52, 0.7), rgba(61, 88, 86, 0.9)), url("../images/handsin.jpg");
 
 %card-effects {
   border-radius: $proj-box-border-rad;
@@ -70,6 +71,12 @@ $volunteerus-head: linear-gradient(30deg, rgba(82, 222, 55, 0.15), rgba(82, 222,
   // opacity:1;
 }
 
+#kappa-head {
+  background-image: $kappa-head;
+  background-size: cover;
+  // -webkit-clip-path: polygon(0 0%, 100% 6%, 100% 100%, 0% 100%)
+}
+
 #sticker-head {
   background-image: $sticker-head;
   background-size: cover;
@@ -114,13 +121,13 @@ $volunteerus-head: linear-gradient(30deg, rgba(82, 222, 55, 0.15), rgba(82, 222,
   width: 75%;
 }
 
-.section{
-  display: flex;
-  border-top:1rem $main-color-light;
-  border-bottom:1rem $main-color-light;
-  margin-bottom: 1rem;
-  align-items: center;
-}
+// .section{
+//   display: flex;
+//   border-top:1rem $main-color-light;
+//   border-bottom:1rem $main-color-light;
+//   margin-bottom: 1rem;
+//   align-items: center;
+// }
 
 .section-title{
   padding-left: .2rem;
@@ -132,8 +139,8 @@ $volunteerus-head: linear-gradient(30deg, rgba(82, 222, 55, 0.15), rgba(82, 222,
 }
 
 .section-details {
-  margin-left: 1rem;
-  margin-right: .3rem;
+ margin: 0.7rem 0.7rem 0.7rem 0.7rem;
+ text-align:center;
 }
 
 .tippy-qr {
@@ -173,7 +180,6 @@ h3 {
 }
 
 .proj-icon {
-  height:2rem;
   width:2rem;
   text-shadow: 1px 1px 2px grey
 }
@@ -181,7 +187,7 @@ h3 {
 .project-title {
   display:flex;
   align-items:center;
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
   font-size: 1.5rem;
   display:flex;
   align-content: center;
@@ -208,7 +214,7 @@ h3 {
   background: $main-color-light;
   background-size: 100%;
   height:0px;
-  // max-height: 0px;
+  
   overflow: hidden;
   transition: height 1.5s ease-in;
   -webkit-transition: height .5s;

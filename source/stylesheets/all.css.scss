@@ -1,4 +1,5 @@
 $font-family: 'Raleway', sans-serif;
+$main-color: rgba(0, 189, 157, 1.0);
 $link-underline: linear-gradient(to bottom, rgba(124, 198, 254, .0) 75%, rgba(0, 189, 157, .5
 )80%);
 @charset "utf-8";
@@ -140,26 +141,65 @@ a[href ^= "http"]:after {
 
   }
 
-#footer-contact-button{
-    padding: 1.7rem 1.7rem;
-    color: white;
-    background-color: rgba(0, 189, 157, .8);
-    border-radius: 1rem;
-    transition: ease 2s;
-    /* align-self: flex-end; */
-    text-align: center;
-
-  }
-
-  #footer-contact-button:hover, #footer-contact-button:click{
-    // padding: 1.5rem 3.5rem;
-  }
-
   .footer-container {
     display: flex;
-    justify-content: center;
+    position:aboslute;
+    // justify-content: space;
     align-items: center;
     flex-direction: column;
+    margin-top:9rem;
+    margin-bottom:2rem;
+    // background: repeating-linear-gradient(135deg, rgba(0, 189, 157, 0.02), rgba(0, 189, 157, 0.3) 1px, transparent 2px, transparent 4px);
+    // height: 15rem;
+  }
+
+  .contact-me-container {
+      display:flex;
+      border-radius: 1px;
+      // background-color: $main-color-light;
+      background: repeating-linear-gradient(135deg, rgba(0, 189, 157, 0.01), rgba(0, 189, 157, 0.2) 1px, transparent 0.5px, transparent 6px);
+      box-shadow: 4px 5.4px 0.1px 0.3px rgba(33, 37, 41, 0.85);
+      justify-content: center;
+      max-width: 44rem;
+      margin:1rem;
+    
+  }
+
+  .contact-head {
+    font-size:2rem;
+    margin-bottom:0rem;
+  }
+
+  .tldr-label {
+    background-color: $main-color;
+    padding:.5rem;
+    text-align: center;
+    align-content:center;
+    // height:2rem;
+    width: 2.5rem;
+  }
+
+  .contact-me-content {
+    text-align:center;
+    font-size:1.3rem;
+    margin:0;
+    max-width: 85%;
+    padding: 1rem;
+    font-size:1.3rem;
+  }
+
+  .contact-me-content > .btn {
+    margin-top:1rem;
+    margin-bottom:1rem;
+  }
+
+
+  .footer-container p {
+    margin:0.5rem;
+  }
+
+  .footer-container div>i {
+    margin:0rem;
   }
 
 .copy-to-clipboard {

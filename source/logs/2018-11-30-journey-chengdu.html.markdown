@@ -1,6 +1,6 @@
 ---
 
-title: I'll Take Fun Over Useful (At Least For Hackathons)
+title: Fun Apps vs Useful Apps
 date: 2018-11-30
 tags:
 layout: article_layout
@@ -31,7 +31,7 @@ We ultimately decided we couldn’t motivate ourselves to bust our asses on thes
 
 3. The final (main) challenge was removing tiles as we explored their part of the map. We did this by putting a behavior on each tile, with the simple rule that when the current position was a certain distance away from the center of a tile, it would be deleted from the PostGIS database.
 
-## wgs84 vs. GCJ-02
+## wgs84 vs GCJ-02
 We were able to address the main problems stated above within the first day of coding, with relative ease. But then it came to testing it out, and everytime I stepped outside I was always disappearing the wrong tiles, on a different block or sometimes even a different street. Not super far off, but enough that it was clear something was wrong.
 
 Long story short: China uses a different coordinate system for national security reasons.
@@ -51,7 +51,7 @@ So we ended up winning the “People’s Choice Award” which was pretty rad. S
 ## Lessons Learned?
 It seems web development in China will always throw a curveball at you, even if you think you’ve accounted for every detail. But nothing is impossible and often in tackling the challenge you end up learning so much more.
 
-Creating ‘Journey’  in 2 days felt impossible at first — now it feels like making it as a miniprogram was actually an excellent way to prototype something that people could use and we could receive immediate feedback on. ‘Journey’ is the one idea that’s at the top of my list for “projects to return to” — the result of the hackathon was a true “proof of concept”, in the sense that it was 1) doable and 2) interested other people. For those reasons, I’ll definitely return to it someday.
+Creating ‘Journey’  in 2 days felt impossible at first — now it feels like making it as a miniprogram was actually an excellent way to prototype something that people could use and we could receive immediate feedback on. ‘Journey’ is the one idea that’s at the top of my list for “projects to return to” — the result of the hackathon was a true “proof of concept”, in the sense that it was doable and interested other people. For those reasons, I’ll definitely return to it someday.
 
 
 

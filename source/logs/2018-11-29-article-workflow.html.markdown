@@ -29,7 +29,7 @@ What I decided on was a really simple mix of HTML and Markdown, supported by Mid
 5. Copy the MD article into my project
 6. Preview then publish!
 
-This affords me a lot of flexibility despite the lack of CMS. For instance, if I want to publish a blog post featuring some media I haven’t used in previous articles, I can just deal with the styling when I have to. And because all articles use the article_layout which all use the same stylesheet, I’ll have that for the next instance I use that type of media.
+This affords me a lot of flexibility despite the lack of a full-blown CMS. For instance, if I want to publish a blog post featuring some media I haven’t used in previous articles, I can just deal with the styling when I have to. And because all articles use the article_layout which all use the same stylesheet, I’ll have that for the next instance I use that type of media.
 
 I also get all the nice little benefits of Middleman’s blog extension, namely the customizable front-matter, the ability to ‘unpublish’ an article without deleting it, all without relying on a chunky CMS. This way I can focus on the content, be 100% in control of the style and create new articles with ease.
 

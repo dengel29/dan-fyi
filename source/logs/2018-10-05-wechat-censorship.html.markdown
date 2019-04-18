@@ -7,18 +7,17 @@ layout: article_layout
 slug: wechat-censorship
 
 ---
-
 # Using Tencent's Text Censorship API
 
 <div class="tldr-container">
   <div class="tldr-label">tl;dr</div>
   <p class="tldr"> 
-    A short technical walkthrough on what you Nned to do to use Tencent's censorship API
+    A short technical walkthrough on what you need to do to use Tencent's censorship API
   </p>
 </div>
 
-##  Intro: What is this and why
-Me and <a class="highlight" href="http://thegraceyang.com/" target="_blank">@yaycake</a> made a miniprogram. Because of our circumstances – hosting on a friends server and with our miniprogram registered under another friend’s ID (as foreign developers without a company) – we felt a responsibility to secure our miniprogram. <br>
+##  Why Did Decide to Use It?
+<a class="highlight" href="http://thegraceyang.com/" target="_blank">@yaycake</a> and I made a miniprogram. Because we were hosting on a friends server and with our miniprogram registered under another friend’s ID (as foreign developers without a company), we felt a responsibility to secure our miniprogram. <br>
 Our use case: we created a gif search app. We don’t control the content, since it pulls content from the Giphy API, so decided to redirect search queries that were inharmonious, only triggering the search if it passed the censorship API’s check.<br>
 Below is the bit of information we learned while implementing it
 

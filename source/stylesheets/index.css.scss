@@ -4,8 +4,9 @@ $nav-underline: linear-gradient(to bottom, rgba(0, 189, 157, .0
 ) 85%, rgba(0, 189, 157, .5
 )70%);
 $link-underline: linear-gradient(to bottom, rgba(0, 189, 157, 0.3) 75%, rgba(0, 189, 157, 0.3)80%);
-$main-color: rgba(0, 189, 157, 0.9);
+
 $main-color-light: rgba(0, 189, 157, 0.3);
+$main-color: rgb(0, 189, 157);
 
 
 .nav-grid {
@@ -55,7 +56,7 @@ $main-color-light: rgba(0, 189, 157, 0.3);
 }
 
 .tldr-label {
-  background-color: $main-color-light;
+  background-color: $main-color;
   padding:.5rem;
   text-align: center;
   // align-content:center;

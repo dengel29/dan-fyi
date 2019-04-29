@@ -26,12 +26,13 @@ $main-color: rgb(0, 189, 157);
   display:flex;
   border-radius: 3px;
   // background-color: $main-color-light;
-  background: repeating-linear-gradient(135deg, rgba(0, 189, 157, 0.02), rgba(0, 189, 157, 0.3) 1px, transparent 2px, transparent 4px);
+  background: repeating-linear-gradient(135deg, rgba(177, 235, 235, 0.945), rgba(82, 190, 172, 0.3) 1px, transparent 2px, transparent 4px);
   // box-shadow: 4px 5.4px 0.1px 0.3px rgba(33, 37, 41, 0.85);
   // justify-content: center;
   max-width: 44rem;
   margin:1.5rem;
   transition-duration: 0.7s;
+  outline-style: none;
   a {
     background: none;
     margin:auto;
@@ -79,13 +80,16 @@ $main-color: rgb(0, 189, 157);
 header {
   display: flex;
   margin-top: 3rem;
+  margin-bottom:2rem;
   justify-content: center;
+  // background: repeating-linear-gradient(135deg, rgba(0, 189, 157, 0.01), rgba(0, 189, 157, 0.2) 1px, transparent 0.5px, transparent 6px);
 }
 
 .welcome-container {
   // display: flex;
   // justify-content: center;
   margin-bottom: 2rem;
+  
 }
 
 ul {
@@ -112,18 +116,28 @@ li {
   }
   text-align: center;
   margin-left:5%;
+  
   margin-right:5%;
   min-width:75%;
-}
-
-
-#footer {
-  font-style: italic;
-  font-size: 10px;
-  text-align:center;
   position: relative;
-  top:40vh;
+  
+
+  &::before {
+    content: '';
+    position: absolute;
+    margin-top:1rem;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 100px);
+    clip-path: polygon(0% 0%, 100% 100px, 100% 100%, 0% calc(100% - 100px));
+    background:linear-gradient( 150deg, rgba(0, 189, 157, 0.02), rgba(0, 189, 157, 0.4));
+    z-index:-1
+  }
 }
+
+
+
 
 #trigger {
   cursor: pointer;

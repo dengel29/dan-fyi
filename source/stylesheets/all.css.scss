@@ -1,7 +1,6 @@
 $font-family: 'Raleway', sans-serif;
 $main-color: rgba(0, 189, 157, 1.0);
-$link-underline: linear-gradient(to bottom, rgba(124, 198, 254, .0) 75%, rgba(0, 189, 157, .5
-)80%);
+$link-underline: linear-gradient(to bottom, rgba(124, 198, 254, 0) 85%, rgba(0, 189, 157, .5)70%);
 @charset "utf-8";
 
 // removes tap-flash
@@ -70,7 +69,16 @@ body {
 
 
 a[href ^= "http"]:after {
-  content: " " url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=);    
+  content: "🔗" url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=);    
+}
+
+a[href ^= "https://github"]:after {
+  content: " "
+}
+
+a[href ^= "mailto"] {
+  cursor:pointer;
+  background-color: none;
 }
 
 .nav-grid {
@@ -147,7 +155,7 @@ a[href ^= "http"]:after {
     // justify-content: space;
     align-items: center;
     flex-direction: column;
-    margin-top:9rem;
+    margin-top:12rem;
     margin-bottom:2rem;
     // background: repeating-linear-gradient(135deg, rgba(0, 189, 157, 0.02), rgba(0, 189, 157, 0.3) 1px, transparent 2px, transparent 4px);
     // height: 15rem;
@@ -181,9 +189,13 @@ a[href ^= "http"]:after {
 
   .contact-me-content {
     text-align:center;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     font-size:1.3rem;
     margin:0;
-    max-width: 85%;
+    min-width:30%;
+    // min-width: 85%;
     padding: 1rem;
     font-size:1.3rem;
   }
@@ -191,6 +203,8 @@ a[href ^= "http"]:after {
   .contact-me-content > .btn {
     margin-top:1rem;
     margin-bottom:1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 
 
@@ -208,9 +222,8 @@ a[href ^= "http"]:after {
   // border-bottom: 4px solid black;
   text-align:center;
   cursor:pointer;
-  margin:auto;
-  padding-right: .6rem;
-  transition:2s;
+  // margin:auto;
+  // transition:2s;
   opacity:.8;
 }
 
@@ -220,13 +233,12 @@ a[href ^= "http"]:after {
   border-bottom: 4px solid black;
   text-align:center;
   cursor:pointer;
-  margin:auto;
+  // margin:auto;
 }
 
 .copy-to-clipboard p:active {
   color: rgba(0, 189, 157, .5);
   text-decoration: underline;
-
 }
 
 // .copy-to-clipboard:active {

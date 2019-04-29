@@ -35,8 +35,26 @@ body {
   animation: fadeIn 1.5s forwards; }
 
 /* FADE IN CODE END ~~~~~~~~~~~~*/
+#resume-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  z-index: -2;
+  justify-content: right; }
+
+#resume {
+  margin-right: 2rem; }
+
 a[href^="http"]:after {
   content: " " url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=); }
+
+a[href^="https://github"]:after {
+  content: " "; }
+
+a[href^="mailto"] {
+  cursor: pointer;
+  background-color: none; }
 
 .nav-grid {
   display: flex;
@@ -53,7 +71,7 @@ a[href^="http"]:after {
 
 :not(.nav-grid) a {
   text-decoration: none;
-  background: linear-gradient(to bottom, rgba(124, 198, 254, 0) 75%, rgba(0, 189, 157, 0.5) 80%);
+  background: linear-gradient(to bottom, rgba(124, 198, 254, 0) 85%, rgba(0, 189, 157, 0.5) 70%);
   border-radius: 3px; }
 
 .nav-grid a {
@@ -96,7 +114,7 @@ a[href^="http"]:after {
   position: aboslute;
   align-items: center;
   flex-direction: column;
-  margin-top: 9rem;
+  margin-top: 12rem;
   margin-bottom: 2rem; }
 
 .contact-me-container {
@@ -121,15 +139,20 @@ a[href^="http"]:after {
 
 .contact-me-content {
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   font-size: 1.3rem;
   margin: 0;
-  max-width: 85%;
+  min-width: 30%;
   padding: 1rem;
   font-size: 1.3rem; }
 
 .contact-me-content > .btn {
   margin-top: 1rem;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem; }
 
 .footer-container p {
   margin: 0.5rem; }
@@ -141,9 +164,6 @@ a[href^="http"]:after {
   outline: none;
   text-align: center;
   cursor: pointer;
-  margin: auto;
-  padding-right: .6rem;
-  transition: 2s;
   opacity: .8; }
 
 .copy-to-clipboard::hover {
@@ -151,8 +171,7 @@ a[href^="http"]:after {
   background-color: rgba(0, 189, 157, 0.5);
   border-bottom: 4px solid black;
   text-align: center;
-  cursor: pointer;
-  margin: auto; }
+  cursor: pointer; }
 
 .copy-to-clipboard p:active {
   color: rgba(0, 189, 157, 0.5);

@@ -83,6 +83,7 @@ li {
     width: 100%;
     height: calc(100% + 100px);
     clip-path: polygon(0% 0%, 100% 100px, 100% 100%, 0% calc(100% - 100px));
+    -webkit-clip-path: polygon(0% 0%, 100% 100px, 100% 100%, 0% calc(100% - 100px));
     background: linear-gradient(150deg, rgba(0, 189, 157, 0.02), rgba(0, 189, 157, 0.4));
     z-index: -1; }
 
